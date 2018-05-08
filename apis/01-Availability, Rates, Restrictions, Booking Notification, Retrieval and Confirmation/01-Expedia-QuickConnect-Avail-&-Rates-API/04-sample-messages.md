@@ -105,7 +105,7 @@ If different room types need to be updated for the same date, the following samp
 </AvailRateUpdateRQ>
 ```
 **Notes**:
-- If there is unsold base allocation remaining for the specified room type and totalInventoryAvailable is set lower than this current base amount, then Expedia QuickConnect will adjust the specified amount to match the current base. When the totalInventoryAvailable amount is adjusted in this manner, a warning (7013) will be returned with the success response and it will mention the adjusted total allocation.
+- If there is unsold base allocation remaining for the specified room type and totalInventoryAvailable is set lower than this current base amount, Expedia QuickConnect will reject the update and warning code 7013 will be returned.
 - If a property does not have a base allocation contract with Expedia, there is no functional difference between specifying an update as “flexibleAllocation” or “totalInventoryAvailable”.
 
 ### Update Rates in a Rate Plan 
